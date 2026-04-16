@@ -95,13 +95,13 @@ def main() -> None:
     # INVALID CASE (telepathic rule)
     try:
         AlienContact(
-            contact_id="AC_HGFGH",
-            timestamp=datetime(2024, 5, 4),
+            contact_id="AC_2024_002",
+            timestamp="2024-01-01T10:00:00",
             location="Mars Base",
-            contact_type=ContactType.physical,
+            contact_type=ContactType.telepathic,
             signal_strength=5.0,
             duration_minutes=30,
-            witness_count=2,  # less than 3
+            witness_count=2,
         )
 
     except ValidationError as e:

@@ -50,10 +50,10 @@ def main() -> None:
 
     try:
         SpaceStation(
-            station_id="ISS004",
+            station_id="ISS004dasdasdasdasdasdas",
             name="Station X",
             crew_size=50,
-            power_level=50.0,
+            power_level=500.0,
             oxygen_level=10.0,
             last_maintenance=datetime(2024, 1, 1, 10, 0, 0),
             is_operational=True,

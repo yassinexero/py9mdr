@@ -129,8 +129,10 @@ def main() -> None:
                 f"{member.specialization}"
             )
 
-    except Exception as e:
-        print(e)
+    except ValidationError as e:
+        print("Expected validation error:")
+        for err in e.errors():
+            print(err["msg"])
 
     print("=" * 40)
 
@@ -140,7 +142,7 @@ def main() -> None:
             mission_id="M_BAD",
             mission_name="Test Mission",
             destination="Moon",
-            launch_date=datetime(2025, 1, 1, 10, 0, 0),
+            launch_date="2025-01-01T10:00:00",
             duration_days=100,
             budget_millions=100.0,
             crew=[
